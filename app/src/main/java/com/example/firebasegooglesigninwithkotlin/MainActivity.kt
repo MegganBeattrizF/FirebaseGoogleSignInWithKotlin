@@ -1,5 +1,6 @@
 package com.example.firebasegooglesigninwithkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -30,11 +31,16 @@ class MainActivity : AppCompatActivity() {
         initViews()
 
         signInButton.setOnClickListener {
-
+            signIn()
         }
         signOutButton.setOnClickListener {
 
         }
+    }
+
+    private fun signIn() {
+        val intentSignIn = signInClient.signInIntent
+        startActivityForResult(intentSignIn,RC_SIG_IN)
     }
 
     private fun initViews() {
