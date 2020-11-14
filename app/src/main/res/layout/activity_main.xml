@@ -19,32 +19,42 @@
         android:id="@+id/signOutGoogleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="150dp"
         android:text="Sair da conta"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/signInGoogleButton"
-        app:layout_constraintStart_toStartOf="@+id/signInGoogleButton"
-        app:layout_constraintTop_toBottomOf="@+id/signInGoogleButton" />
+        app:layout_constraintStart_toStartOf="@+id/signInGoogleButton" />
 
     <TextView
         android:id="@+id/textView_Wellcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
+        android:textColor="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView_userEmail"
-        app:layout_constraintEnd_toEndOf="@+id/textView_userEmail"
+        app:layout_constraintEnd_toEndOf="@+id/signOutGoogleButton"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/textView_userEmail" />
+        app:layout_constraintStart_toStartOf="@+id/signOutGoogleButton" />
 
     <TextView
         android:id="@+id/textView_userEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="200dp"
         android:textColor="@color/purple_700"
-        app:layout_constraintBottom_toTopOf="@+id/signInGoogleButton"
-        app:layout_constraintEnd_toEndOf="@+id/signInGoogleButton"
-        app:layout_constraintStart_toStartOf="@+id/signInGoogleButton" />
+        app:layout_constraintBottom_toTopOf="@+id/signOutGoogleButton"
+        app:layout_constraintEnd_toEndOf="@+id/signOutGoogleButton"
+        app:layout_constraintStart_toStartOf="@+id/signOutGoogleButton" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/signInGoogleButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/signInGoogleButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
