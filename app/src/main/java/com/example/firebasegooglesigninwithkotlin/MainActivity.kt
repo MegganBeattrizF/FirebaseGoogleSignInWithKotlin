@@ -47,8 +47,18 @@ class MainActivity : AppCompatActivity() {
             signIn()
         }
         signOutButton.setOnClickListener {
-
+            signOut()
         }
+    }
+
+    private fun signOut() {
+        fAuth.signOut()
+        signInClient.signOut().addOnCompleteListener(this) { task ->
+            updateUI(null)
+            signInButton.visibility = View.VISIBLE
+            signOutButton.visibility = View.GONE
+        }
+
     }
 
     private fun signIn() {
