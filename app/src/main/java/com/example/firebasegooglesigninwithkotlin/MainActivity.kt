@@ -134,5 +134,13 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        updateUI(fAuth.currentUser)
+    }
 
+    override fun onPause() {
+        super.onPause()
+        updateUI(fAuth.currentUser)
+    }
 }
