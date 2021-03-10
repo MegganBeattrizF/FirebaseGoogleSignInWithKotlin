@@ -46,9 +46,9 @@ class MainActivity : AppCompatActivity() {
         signInButton.setOnClickListener {
             signIn()
         }
-        signOutButton.setOnClickListener {
-            signOut()
-        }
+//        signOutButton.setOnClickListener {
+//            signOut()
+//        }
     }
 
     private fun signOut() {
